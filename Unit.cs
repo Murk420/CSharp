@@ -4,21 +4,19 @@
 
 abstract class Unit
 {
+
     public bool isdead = false;
     public Unit()
     {
         SetStats();
     }
-
-
-    public Dice ChanceDice = new(2, 6, 0);
-    public Dice DmgDice = new(1, 10, 0);
+    public IRandomProvider Dmg { get; protected set; }
     //Health
     protected int hp;
     //Resources
     protected int res;
     //Carrying Capacity
-    protected int caca;   
+    protected int caca;
     public int Res
     {
         get { return res; }
@@ -31,7 +29,7 @@ abstract class Unit
             res = value;
         }
     }
-   
+
     protected virtual void SetStats()
     {
         hp = 100;

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-public struct Dice
+public struct Dice : IRandomProvider
 {
     //Number of Dice rolled
     uint Scalar;
@@ -14,7 +14,7 @@ public struct Dice
         BaseDie = baseDie;
         Modifier = modifier;
     }
-    public int Roll()
+    public int GetNumber()
     {
         int Result = 0;
         for (int i = 0; i < Scalar; i++)

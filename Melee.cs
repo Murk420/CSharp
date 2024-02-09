@@ -1,19 +1,21 @@
 ﻿abstract class Melee : Unit
-{
+{     
     //Strength
     protected int STR { get; set; }
     //Armor
     protected int ARM { get; set; }
     public override void Attack(Unit EnemyUnit)
     {
-        int HitChance = ChanceDice.Roll();
+        int HitChance = ChanceDice.GetNumber();
+        int DmgDealt;
         if (HitChance >= 6)
         {
             Console.WriteLine("Succesful Hit!");
-            EnemyUnit.Defend(this);
+            DmgDealt = DmgDice.GetNumber();
             if (HitChance >= 12)
             {
                 Console.WriteLine("Critical Hit!");
+                EnemyUnit.Defend(this);
                 EnemyUnit.Defend(this);
             }
         }
@@ -26,11 +28,11 @@
     }
     public override void Defend(Unit EnemyUnit)
     {
-        int HitChance = ChanceDice.Roll();
+        int HitChance = ChanceDice.GetNumber();
         if (HitChance > 8)
         {
-            Console.WriteLine("Block Failed!");
-            HP -= EnemyUnit.DmgDice.Roll();
+            Console.WriteLine("Great Defense!");
+            HP -= (EnemyUnit.Dmg.GetNumber() / 2);
         }
         else if (HitChance >= 12)
         {
@@ -39,43 +41,26 @@
         else if (HitChance <= 1)
         {
             Console.WriteLine("Horrible Defense!");
-            HP -= (EnemyUnit.DmgDice.Roll() + 2);
+            HP -= (EnemyUnit.DmgDice.GetNumber() + 2);
         }
         else
         {
-            Console.WriteLine("Great Defense!");
-            HP -= (EnemyUnit.DmgDice.Roll() / 2);
+            Console.WriteLine("Block Failed!");
+            HP -= EnemyUnit.GetNumber();
         }
+
     }
 }
 sealed class MeleeHuman : Melee
 {
-    protected override void SetStats()
-    {
-        Racist = Race.Human;
-        base.SetStats();
-        STR = 11;
-        ARM = 15;
-    }
+
 }
 sealed class MeleeVamp : Melee
 {
-    protected override void SetStats()
-    {
-        Racist = Race.Vampire;
-        base.SetStats();
-        STR = 13;
-        ARM = 8;
-    }
+
 
 }
 sealed class MeleeWolf : Melee
 {
-    protected override void SetStats()
-    {
-        Racist = Race.Werewolf;
-        base.SetStats();
-        STR = 15;
-        ARM = 10;
-    }
+
 }

@@ -1,12 +1,15 @@
 ﻿abstract class Ranged : Unit
 {
+
+    
+    
     //Range
     protected int RNG { get; set; }
     //Accuracy
     protected int ACC { get; set; }
     public override void Attack(Unit EnemyUnit)
     {
-        int HitChance = ChanceDice.Roll();
+        int HitChance = Dmg.GetNumber();
         if (HitChance >= 6)
         {
             Console.WriteLine("Succesful Hit!");
@@ -15,6 +18,7 @@
             {
                 Console.WriteLine("Critical Hit!");
                 EnemyUnit.Defend(this);
+                EnemyUnit.Defend(this);                
             }
         }
         else if (HitChance <= 1)
@@ -26,11 +30,11 @@
     }
     public override void Defend(Unit EnemyUnit)
     {
-        int HitChance = ChanceDice.Roll();
+        int HitChance = ChanceDice.GetNumber();
         if (HitChance > 8)
         {
             Console.WriteLine("Block Failed!");
-            HP -= EnemyUnit.DmgDice.Roll();
+            HP -= EnemyUnit.DmgDice.GetNumber();
         }
         else if (HitChance >= 12)
         {
@@ -39,44 +43,28 @@
         else if (HitChance <= 1)
         {
             Console.WriteLine("Horrible Defense!");
-            HP -= (EnemyUnit.DmgDice.Roll() + 2);
+            HP -= (EnemyUnit.DmgDice.GetNumber() + 2);
         }
         else
         {
             Console.WriteLine("Great Defense!");
-            HP -= (EnemyUnit.DmgDice.Roll() / 2);
+            HP -= (EnemyUnit.DmgDice.GetNumber() / 2);
         }
     }
 }
 sealed class RangedHuman : Ranged
 {
-    protected override void SetStats()
+    public RangedHuman()
     {
-        Racist = Race.Human;
-        base.SetStats();
-        RNG = 11;
-        ACC = 10;
+        Dmg = new Bag(5);
     }
-    
 }
 sealed class RangedVamp : Ranged
 {
-    protected override void SetStats()
-    {
-        Racist = Race.Vampire;
-        base.SetStats();
-        RNG = 12;
-        ACC = 15;
-    }
+  
 }
 sealed class RangedWolf : Ranged
 {
-    protected override void SetStats()
-    {
-        Racist = Race.Werewolf;
-        base.SetStats();
-        RNG = 14;
-        ACC = 9;
-    }
+  
 }
 

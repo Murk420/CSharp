@@ -1,4 +1,6 @@
-﻿namespace HW._1
+﻿using System.Drawing;
+
+namespace HW._1
 {
     public class Program
     {
@@ -61,6 +63,7 @@
             int BadLoot = 0;
             Console.WriteLine("The Battle is soon to begin!");
             int order = 0;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;          
             Console.WriteLine("The Good Team :D :");
             foreach (Unit unit in GoodUnits)
             {
@@ -71,6 +74,7 @@
             Console.WriteLine("Team Resources: " + GoodLoot);
             Space();
             order = 0;
+            Console.ForegroundColor= ConsoleColor.DarkRed;
             Console.WriteLine("The Bad Team >:( :");
             foreach (Unit unit in BadUnits)
             {
@@ -79,6 +83,7 @@
                 BadLoot += unit.Res;
             }
             Console.WriteLine("Team Resources: " + BadLoot);
+            Console.ResetColor();
             Space();
             GoodLoot = 0;
             BadLoot = 0;
@@ -117,6 +122,8 @@
                 }
             }
             int WeatherDuration = Random.Shared.Next(1, 5);
+            Console.WriteLine(  "Press any key to start");
+            Console.ReadKey();
             Console.WriteLine("Fight!");
 
             //Battle Sequence
@@ -154,16 +161,16 @@
                 //Removing Dead Units from lists
                 if (BadUnits[DEF1].isdead)
                 {
-                    Console.WriteLine(BadUnits[DEF1] + "Has Died!");
+                    Console.WriteLine(BadUnits[DEF1] + " Has Died!");
                     GoodUnits[ATK1].Loot(BadUnits[DEF1]);
-                    GoodLoot += GoodUnits[ATK1].ResLooted;
+                    GoodLoot += BadUnits[DEF1].ResLooted;
                     BadUnits.Remove(BadUnits[DEF1]);
                 }
                 if (GoodUnits[ATK1].isdead)
                 {
-                    Console.WriteLine(GoodUnits[ATK1] + "Has Died!");
+                    Console.WriteLine(GoodUnits[ATK1] + " Has Died!");
                     BadUnits[DEF1].Loot(GoodUnits[ATK1]);
-                    BadLoot += BadUnits[DEF1].ResLooted;
+                    BadLoot += GoodUnits[ATK1].ResLooted;
                     GoodUnits.Remove(GoodUnits[ATK1]);
                 }
                 if (GoodUnits.Count == 0 || BadUnits.Count == 0)
@@ -181,27 +188,24 @@
                 {
                     Console.WriteLine(GoodUnits[DEF2] + " Has Died!");
                     BadUnits[ATK2].Loot(GoodUnits[DEF2]);
-                    BadLoot += BadUnits[ATK2].ResLooted;
+                    BadLoot += GoodUnits[DEF2].ResLooted;
                     GoodUnits.Remove(GoodUnits[DEF2]);
                 }
                 if (BadUnits[ATK2].isdead)
                 {
                     Console.WriteLine(BadUnits[ATK2] + " Has Died!");
                     GoodUnits[DEF2].Loot(BadUnits[ATK2]);
-                    GoodLoot += GoodUnits[DEF2].ResLooted;
+                    GoodLoot += BadUnits[ATK2].ResLooted;
                     BadUnits.Remove(BadUnits[ATK2]);
                 }
-                Console.WriteLine(GoodUnits[2].DmgDice.GetHashCode()); 
-
-                Console.ReadLine();
                 Console.WriteLine();
+
             }
 
             Space();
             Console.WriteLine("The Battle Is Over!");
             Space();
             
-
             //Bad Ending
             if (GoodUnits.Count == 0)
             {
