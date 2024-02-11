@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\markk\\OneDrive\\Documents\\GitHub\\Unit\\CSharp\\Unit.csproj": {}
+    "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Unit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\markk\\OneDrive\\Documents\\GitHub\\Unit\\CSharp\\Unit.csproj": {
+    "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Unit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\markk\\OneDrive\\Documents\\GitHub\\Unit\\CSharp\\Unit.csproj",
+        "projectUniqueName": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Unit.csproj",
         "projectName": "Unit",
-        "projectPath": "C:\\Users\\markk\\OneDrive\\Documents\\GitHub\\Unit\\CSharp\\Unit.csproj",
-        "packagesPath": "C:\\Users\\markk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\markk\\OneDrive\\Documents\\GitHub\\Unit\\CSharp\\obj\\",
+        "projectPath": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Unit.csproj",
+        "packagesPath": "C:\\Users\\Murk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\markk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Murk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

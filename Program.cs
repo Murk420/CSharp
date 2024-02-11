@@ -40,18 +40,6 @@
                             RangedWolf rangedWolf = new();
                             list.Add(rangedWolf);
                             break;
-                            //case 6:
-                            //    PsyHuman psyHuman = new();
-                            //    list.Add(psyHuman);
-                            //    break;
-                            //case 7:
-                            //    PsyVamp psyVamp = new();
-                            //    list.Add(psyVamp);
-                            //    break;
-                            //case 8:
-                            //    PsyWolf psyWolf = new();
-                            //    list.Add(psyWolf);
-                            //    break;
                     }
                 }
             }
@@ -68,11 +56,11 @@
             foreach (Unit unit in GoodUnits)
             {
                 order++;
-                Console.WriteLine(" " + order + ". " + unit + " " + unit.Name + " HP: " + unit.HP);
+                Console.WriteLine($" {order}. {unit} {unit.Name} - HP: {unit.HP}");
                 goodResources += unit.Res;
                 Space();
             }
-            Console.WriteLine(" Team Resources: " + goodResources);
+            Console.WriteLine($" Team Resources: {goodResources}");
             Space();
             order = 0;
             Console.ForegroundColor = ConsoleColor.Red;
@@ -81,11 +69,11 @@
             foreach (Unit unit in BadUnits)
             {
                 order++;
-                Console.WriteLine(" " + order + ". " + unit + " " + unit.Name + " HP: " + unit.HP);
+                Console.WriteLine($" {order}. {unit} {unit.Name} - HP: {unit.HP}");
                 badResources += unit.Res;
                 Space();
             }
-            Console.WriteLine(" Team Resources: " + goodResources);
+            Console.WriteLine($" Team Resources: {goodResources}");
             Console.ResetColor();
             Space();
             int Round = 0;
@@ -99,7 +87,7 @@
                 {
                     case 0:
                         CurrentWeather = Weather.Heatwave;
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine(" The Gods of the sun are angry, Better stay Hydrated!");
                         Console.ResetColor();
                         break;
@@ -169,11 +157,11 @@
                 //Target
                 int DEF1 = Random.Shared.Next(0, BadUnits.Count);
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write(" " + GoodUnits[ATK1] + " " + GoodUnits[ATK1].Name);
+                Console.Write($" {GoodUnits[ATK1]} {GoodUnits[ATK1].Name}");
                 Console.ResetColor();
-                Console.Write(" Attacks ");
+                Console.Write(" Attacks");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(BadUnits[DEF1] + " " + BadUnits[DEF1].Name);
+                Console.WriteLine($" {BadUnits[DEF1]} {BadUnits[DEF1].Name}");
                 Console.ResetColor();
                 Space();
                 GoodUnits[ATK1].Attack(BadUnits[DEF1]);
@@ -182,14 +170,20 @@
                 //Removing Dead Units from lists
                 if (BadUnits[DEF1].isdead)
                 {
-                    Console.WriteLine(" " + BadUnits[DEF1] + " " + BadUnits[DEF1].Name + " Has Died!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write($" {BadUnits[DEF1]} {BadUnits[DEF1].Name}");
+                    Console.ResetColor();
+                    Console.WriteLine(" Has Died!"); 
                     Space();
                     GoodUnits[ATK1].Loot(BadUnits[DEF1]);
                     BadUnits.Remove(BadUnits[DEF1]);
                 }
                 if (GoodUnits[ATK1].isdead)
                 {
-                    Console.WriteLine(" " + GoodUnits[ATK1] + " " + GoodUnits[ATK1].Name + " Has Died!");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write($" {GoodUnits[ATK1]} {GoodUnits[ATK1].Name}");
+                    Console.ResetColor();
+                    Console.WriteLine(" Has Died!"); 
                     Space();
                     BadUnits[DEF1].Loot(GoodUnits[ATK1]);
                     GoodUnits.Remove(GoodUnits[ATK1]);
@@ -204,11 +198,11 @@
                 //Target
                 int DEF2 = Random.Shared.Next(0, GoodUnits.Count);
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write(" " + BadUnits[ATK2] + " " + BadUnits[ATK2].Name);
+                Console.Write($" {BadUnits[ATK2]} {BadUnits[ATK2].Name}");
                 Console.ResetColor();
-                Console.Write(" Attacks ");
+                Console.Write(" Attacks");
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(GoodUnits[DEF2] + " " + GoodUnits[DEF2].Name);
+                Console.WriteLine($" {GoodUnits[DEF2]} {GoodUnits[DEF2].Name}");
                 Console.ResetColor();
                 Space();
                 BadUnits[ATK2].Attack(GoodUnits[DEF2]);
@@ -217,25 +211,31 @@
                 //Removing Bodies yet again
                 if (GoodUnits[DEF2].isdead)
                 {
-                    Console.WriteLine(" " + GoodUnits[DEF2] + " " + GoodUnits[DEF2].Name + " Has Died!");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write($" {GoodUnits[DEF2]} {GoodUnits[DEF2].Name}");
+                    Console.ResetColor();
+                    Console.WriteLine(" Has Died!");
                     Space();
                     BadUnits[ATK2].Loot(GoodUnits[DEF2]);
                     GoodUnits.Remove(GoodUnits[DEF2]);
                 }
                 if (BadUnits[ATK2].isdead)
                 {
-                    Console.WriteLine(" " + BadUnits[ATK2] + " " + BadUnits[ATK2].Name + " Has Died!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write($" {BadUnits[ATK2]} {BadUnits[ATK2].Name}");
+                    Console.ResetColor();                    
+                    Console.WriteLine(" Has Died!");
                     Space();
                     GoodUnits[DEF2].Loot(BadUnits[ATK2]);
                     BadUnits.Remove(BadUnits[ATK2]);
                 }
 
                 //Round summary
-                Console.WriteLine(" Good Units Alive: " + GoodUnits.Count);
-                Space();
-                Console.WriteLine(" Bad Units Alive: " + BadUnits.Count);
-                Space();
                 Console.WriteLine(" Round Over!");
+                Space();
+                Console.WriteLine($" Good Units Alive: {GoodUnits.Count}");
+                Space();
+                Console.WriteLine($" Bad Units Alive: {BadUnits.Count}");
                 Space();
             }
 
@@ -248,33 +248,34 @@
             //Good Ending
             if (BadUnits.Count == 0)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 int Loot = 0;
-                Console.WriteLine(" The Good Guys Won :)");
+                Console.WriteLine(" The Good Guys Won :) ");
                 Space();
                 foreach (Unit unit in GoodUnits)
                 {
-                    Console.WriteLine(" " + unit + " " + unit.Name + " HP: " + +unit.HP);
+                    Console.WriteLine($" {unit} {unit.Name} - HP: {unit.HP}");
                     Space();
                     Loot += unit.Res;
                 }
                 Space();
-                Console.WriteLine(" Resources Looted: " + (Loot - goodResources));
+                Console.WriteLine($" Resources Looted: {Loot - goodResources}");
             }
 
             //Bad Ending
             if (GoodUnits.Count == 0)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 int Loot = 0;
-                Console.WriteLine(" The Baddies Won :(");
+                Console.WriteLine(" The Baddies Won :( ");
                 Space();
                 foreach (Unit unit in BadUnits)
                 {
-                    Console.WriteLine(" " + unit + " " + unit.Name + " HP: " + +unit.HP);
+                    Console.WriteLine($" {unit} {unit.Name} - HP: {unit.HP}");
                     Space();
                     Loot += unit.Res;
-                }
-                Space();
-                Console.WriteLine(" Resources Looted: " + (Loot - badResources));
+                }                
+                Console.WriteLine($" Resources Looted: {Loot - badResources}");
             }
 
         }

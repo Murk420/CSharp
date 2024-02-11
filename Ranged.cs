@@ -23,6 +23,7 @@
                     EnemyUnit.Defend(this);
                 }
                 Heal();
+                Console.WriteLine();
             }
             else
             {

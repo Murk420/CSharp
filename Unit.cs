@@ -67,12 +67,12 @@ abstract class Unit
             if (Racist == Race.Vampire || Racist == Race.Werewolf)
             {
                 HP += (dmgDealt / 4);
-                Console.WriteLine(this + "Regenerated!");
+                Console.WriteLine($" {this} {this.Name} Regenerated!");
             }
             else
             {
                 HP += 3;
-                Console.WriteLine(this + "Healed!");
+                Console.WriteLine($"{this} {this.Name} Healed!");
             }
         }
     }
@@ -136,6 +136,7 @@ abstract class Unit
 
     }
 
+    //Method for Looting Resources
     public void Loot(Unit EnemyUnit)
     {
         Res += EnemyUnit.Res;
@@ -157,24 +158,26 @@ public enum Weather
 }
 public enum Names
 {
-    Kyle,
-    Randy,
-    Jeff,
-    Stan,
     Alex,
-    Kristoff,
-    Edward,
-    Nicolaj,
     Benjamin,
-    Elijah,
-    Lorenzo,
-    Fredrick,
-    Marcus,
-    DorBenDor,
     Bingus,
-    Patrick,
     David,
+    DorBenDor,
+    Edward,
+    Elijah,
+    Fredrick,
+    Jeff,
+    Klaus,
+    Kristoff,
+    Kyle,
+    Lorenzo,
+    Marcus,
+    Nicolaj,
+    Patrick,
     Phineas,
+    Randy,
+    Stan,
+    Winston
 }
 
 
