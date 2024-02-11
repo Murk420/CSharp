@@ -19,9 +19,9 @@ public struct Dice : IRandomProvider
         int Result = 0;
         for (int i = 0; i < Scalar; i++)
         {
-            Result += Random.Shared.Next(1, (int)BaseDie);
+            Result = Random.Shared.Next(1, (int)BaseDie + 1);
         }
-        return Result + Modifier;
+        return (Result + Modifier);
     }
     public override string ToString()
     {

@@ -4,19 +4,39 @@
 
 abstract class Unit
 {
-
-    public bool isdead = false;
-    public Unit()
+    //Giving the unit a name to easily identify him from the other Units
+    public string Name { get; protected set; }
+    public void GiveName()
     {
-        SetStats();
+        // Generate a random index based on the number of items in the enum
+        int rnd = new Random().Next(Enum.GetValues(typeof(Names)).Length);
+        // Use the random index to get a name from the enum
+        Name = ((Names)rnd).ToString();
     }
-    public IRandomProvider Dmg { get; protected set; }
     //Health
     protected int hp;
+    protected int maxHp;
+    public int HP
+    {
+        get { return hp; }
+        protected set
+        {
+            if (value <= 0)
+            {
+                hp = 0;
+                isdead = true;
+            }
+            if (hp > maxHp)
+            {
+                hp = maxHp;
+            }
+            hp = value;
+        }
+    }
+    //When the Unit's HP drops to 0 he isdead
+    public bool isdead = false;
     //Resources
     protected int res;
-    //Carrying Capacity
-    protected int caca;
     public int Res
     {
         get { return res; }
@@ -29,96 +49,96 @@ abstract class Unit
             res = value;
         }
     }
-
-    protected virtual void SetStats()
-    {
-        hp = 100;
-        res = 7;
-        caca = 21;
-    }
-    public virtual int HP
-    {
-        get { return hp; }
-        protected set
-        {
-            if (value <= 0)
-            {
-                hp = 0;
-                isdead = true;
-            }
-            hp = value;
-        }
-    }
-    public Race Racist { get; set; }
+    //Resource Carrying Capacity
+    protected int caca;
+    //General Interface that generates the Units Damage
+    protected virtual IRandomProvider Dmg { get; set; }
+    //Provides the Damage Dealt in a readble way other Units can see
+    public int dmgDealt;
+    //Method for setting the Units Stats
+    public Race Racist { get; protected set; }
     public abstract void Attack(Unit EnemyUnit);
     public abstract void Defend(Unit EnemyUnit);
-    //Amount of Resources Looted
-    public int ResLooted = 0;
-    public void Loot(Unit EnemyUnit)
+    public void Heal()
     {
-        //Resources before loot
-        int lootb4 = Res;
-        Res += EnemyUnit.Res;
-        ResLooted += (Res - lootb4);
+        if (hp < (maxHp / 2))
+        {
+
+            if (Racist == Race.Vampire || Racist == Race.Werewolf)
+            {
+                HP += (dmgDealt / 4);
+                Console.WriteLine(this + "Regenerated!");
+            }
+            else
+            {
+                HP += 3;
+                Console.WriteLine(this + "Healed!");
+            }
+        }
     }
-    int WeatherModifier = 0;
+
     //Method for different Weather effects on different Races
+    protected int weatherModifier = 0;
     public void WeatherEffect(Weather weather, Race race)
     {
         switch (weather, race)
         {
             case (Weather.Heatwave, Race.Human):
-                WeatherModifier = -2;
+                weatherModifier = -2;
                 break;
             case (Weather.Heatwave, Race.Vampire):
-                WeatherModifier = -2;
+                weatherModifier = -2;
                 break;
             case (Weather.Heatwave, Race.Werewolf):
-                WeatherModifier = -2;
+                weatherModifier = -2;
                 break;
 
             case (Weather.Warm, Race.Human):
-                WeatherModifier = 0;
+                weatherModifier = 0;
                 break;
             case (Weather.Warm, Race.Vampire):
-                WeatherModifier = -1;
+                weatherModifier = -1;
                 break;
             case (Weather.Warm, Race.Werewolf):
-                WeatherModifier = -1;
+                weatherModifier = -1;
                 break;
 
             case (Weather.Nice, Race.Human):
-                WeatherModifier = 2;
+                weatherModifier = 2;
                 break;
             case (Weather.Nice, Race.Vampire):
-                WeatherModifier = 1;
+                weatherModifier = 1;
                 break;
             case (Weather.Nice, Race.Werewolf):
-                WeatherModifier = 1;
+                weatherModifier = 1;
                 break;
 
             case (Weather.Cold, Race.Human):
-                WeatherModifier = 0;
+                weatherModifier = 0;
                 break;
             case (Weather.Cold, Race.Vampire):
-                WeatherModifier = 2;
+                weatherModifier = 2;
                 break;
             case (Weather.Cold, Race.Werewolf):
-                WeatherModifier = 1;
+                weatherModifier = 1;
                 break;
 
             case (Weather.Freezing, Race.Human):
-                WeatherModifier = -2;
+                weatherModifier = -2;
                 break;
             case (Weather.Freezing, Race.Vampire):
-                WeatherModifier = 1;
+                weatherModifier = 1;
                 break;
             case (Weather.Freezing, Race.Werewolf):
-                WeatherModifier = 2;
+                weatherModifier = 2;
                 break;
         }
-        DmgDice.Modifier = WeatherModifier;
-        ChanceDice.Modifier = WeatherModifier;
+
+    }
+
+    public void Loot(Unit EnemyUnit)
+    {
+        Res += EnemyUnit.Res;
     }
 }
 public enum Race
@@ -134,6 +154,27 @@ public enum Weather
     Nice,
     Cold,
     Freezing
+}
+public enum Names
+{
+    Kyle,
+    Randy,
+    Jeff,
+    Stan,
+    Alex,
+    Kristoff,
+    Edward,
+    Nicolaj,
+    Benjamin,
+    Elijah,
+    Lorenzo,
+    Fredrick,
+    Marcus,
+    DorBenDor,
+    Bingus,
+    Patrick,
+    David,
+    Phineas,
 }
 
 
