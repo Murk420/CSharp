@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\melee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:melee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\genericdice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:genericdice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\randomfighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:randomfighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\irandomprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:irandomprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|c:\\users\\murk\\documents\\github\\csharp\\ranged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56B4CD18-6C59-4E58-BF90-109EE183410D}|Unit.csproj|solutionrelative:ranged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RandomFighter.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\RandomFighter.cs",
+              "RelativeDocumentMoniker": "RandomFighter.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\RandomFighter.cs",
+              "RelativeToolTip": "RandomFighter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T15:15:55.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRandomProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\IRandomProvider.cs",
+              "RelativeDocumentMoniker": "IRandomProvider.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\IRandomProvider.cs",
+              "RelativeToolTip": "IRandomProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAA+wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T03:33:11.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:53:37.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Unit.cs",
+              "RelativeDocumentMoniker": "Unit.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Unit.cs",
+              "RelativeToolTip": "Unit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:53:37.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Melee.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Melee.cs",
+              "RelativeDocumentMoniker": "Melee.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Melee.cs",
+              "RelativeToolTip": "Melee.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwAIAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:53:37.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Ranged.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Ranged.cs",
+              "RelativeDocumentMoniker": "Ranged.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Ranged.cs",
+              "RelativeToolTip": "Ranged.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:53:37.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenericDice.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\GenericDice.cs",
+              "RelativeDocumentMoniker": "GenericDice.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\GenericDice.cs",
+              "RelativeToolTip": "GenericDice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:53:37.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Deck.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Deck.cs",
+              "RelativeDocumentMoniker": "Deck.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Deck.cs",
+              "RelativeToolTip": "Deck.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAASwDYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T15:04:38.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Bag.cs",
+              "DocumentMoniker": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Bag.cs",
+              "RelativeDocumentMoniker": "Bag.cs",
+              "ToolTip": "C:\\Users\\Murk\\Documents\\GitHub\\CSharp\\Bag.cs",
+              "RelativeToolTip": "Bag.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwBUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:53:37.552Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

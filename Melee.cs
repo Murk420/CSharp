@@ -1,6 +1,6 @@
 ﻿abstract class Melee : Unit
 {
-    new IRandomProvider Dmg = new Dice(2, 6, 0);
+    new IRandomProvider Dmg = new Dice(2, 6, 0) as IRandomProvider;
     protected Dice chanceDice = new Dice(1, 10, 0);
     //Strength
     protected int STR { get; set; }
